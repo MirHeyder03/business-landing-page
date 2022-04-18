@@ -1,0 +1,226 @@
+@font-face {
+  font-family: Poppins;
+  src: url("../fonts/FontsFree-Net-Poppins-Black.ttf");
+}
+
+:root {
+  --orange: #fdc11f;
+  --orange-transparent: #fdc21fb4;
+  --teal: #20364b;
+}
+
+* {
+  color: white;
+  font-family: sans-serif !important;
+  user-select: none;
+}
+
+body {
+  background-color: var(--teal);
+  padding: 60px 80px;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: start;
+}
+
+.logo {
+  width: 180px;
+  height: 90px;
+}
+
+.header-right-nav {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-right-link {
+  text-decoration: none;
+  width: fit-content;
+  position: relative;
+}
+
+.header-right-link::after{
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background-color: var(--orange);
+  bottom: -10px;
+  left:0;
+  transition: 200ms ease-in;
+}
+.header-right-link:hover::after{
+  width: 100%;
+}
+.triangle-container {
+  position: relative;
+}
+
+/* pseudo element */
+.triangle-container::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  margin-left: 10px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 7px solid var(--orange);
+  border-radius: 1px;
+}
+
+.search-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--orange);
+  height: 30px;
+  width: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  transition: 250ms ease-in ;
+}
+.search-icon-container:hover{
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 10px rgba(253, 193, 31, 0.49);
+  -webkit-box-shadow: 0px 0px 0px 10px rgba(253, 193, 31, 0.49);
+  -moz-box-shadow: 0px 0px 0px 10px rgba(253, 193, 31, 0.49);
+}
+
+.search-icon {
+  transform: scale(0.4);
+}
+
+/* middle part */
+
+.middle-part {
+  width: 100%;
+  display: flex;
+  padding: 70px 0px 50px;
+}
+
+.left {
+    width: 50%;
+}
+
+.orange-heading{
+    color: var(--orange);
+    font-family: Poppins !important;
+    font-size: 75px;
+    padding-right: 40px;
+}
+.right {
+  width: 50%;
+}
+
+.left-subscribe-heading {
+  font-weight: 700;
+  font-size: 70px;
+  font-family: Poppins !important;
+}
+.left-text{
+    max-width: 75%;
+    line-height:25px;
+    margin-top: 20px;
+}
+
+.input-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input{
+    border-radius: 20px;
+    border: 0;
+    padding: 7px 14px;
+    width:250px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.submit-btn{
+    margin-top: 20px;
+    background-color: var(--orange);
+    width: 80px;
+    padding: 6px 0px;
+    border: 0px;
+    border-radius: 30px;
+    color: var(--teal);
+    font-size: 15px;
+    position: relative;
+}
+
+.submit-btn::after{
+    content:'';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+    background-color: var(--teal);
+    top: 10px;
+    right: 7px;
+}
+
+
+
+/*  right */
+.right{
+}
+.main-image{
+  width: 400px;
+  border-radius: 200px;
+  margin-left: 50px;
+}
+
+.main-image-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-image: url("../images/ellipse-orange.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  clip-path: polygon(33% 60%, 26% 60%, 20% 61%, 12% 68%, 14% 74%, 18% 81%, 30% 88%, 47% 88%, 54% 88%, 66% 86%, 92% 84%, 94% 81%, 95% 74%, 93% 60%, 89% 45%, 87% 35%, 85% 27%, 81% 20%, 77% 11%, 72% 4%, 60% 4%, 56% 5%, 49% 9%, 48% 10%, 44% 17%, 42% 23%, 39% 33%, 37% 39%, 36% 45%);
+  /* https://bennettfeely.com/clippy/  -> burdan kopyalamisam */
+}
+
+.icon-container{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.rocket{
+  position: absolute;
+  top: 10px;
+  width: 50px;
+  left: 20px;
+  pointer-events: none;
+}
+.aim{
+  width: 50px;
+  position: absolute;
+  bottom: -50px;
+  right: -20px;
+  pointer-events: none;
+}
+.messages{
+  width: 50px;
+  position: absolute;
+  left: -50px;
+  bottom: 20px;
+  pointer-events: none;
+}
